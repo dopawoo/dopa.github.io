@@ -187,7 +187,7 @@ WPFileInfoMeta.prototype.getDetailInfoForObjectiveC = function() {
 
 LSModelPropertyInfoMeta.prototype.getDefineContentTextForObjectiveC = function() {
 	var pointerText = (this.pointerString && this.isPointer) ? this.pointerString : "";
-	var genericText = (this.isContainer && this.showContainerGeneric && this.genericClassName.length > 0) ? ("<"+ this.genericClassName + "* >") : "";
+	var genericText = (this.isContainer && this.showContainerGeneric && this.genericClassName.length > 0) ? ("<"+ this.genericClassName + " *>") : "";
 	var propertyText = this.propertyType + genericText + " " + pointerText + this.name + ";";
 	this.defineContentText = this.defineKeyword + " " + propertyText;
 }
